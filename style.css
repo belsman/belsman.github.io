@@ -14,3 +14,35 @@ a:hover {
 .green-color {
     color: #4caf50 !important;
 }
+
+.bg-green {
+    background-color: #4caf50;
+}
+
+.footer-icon {
+    color: #000;
+}
+
+/* === Section: Intro === */
+section#intro {
+    width: 60%;
+    margin: 60px 0;
+}
+
+.social-network-icons {
+    margin-left: 40px;
+}
+
+.icon {
+    color: #4caf50;
+}
+
+/* === Section: portfolio ==== */
+section#portfolio {
+    margin: 50px 0;
+}
+
+/* === Section: contact === */
+section#contact {
+    margin: 35px 0;
+}
