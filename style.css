@@ -86,3 +86,41 @@ section::before {
 .skill-lists li:last-child {
   border-bottom: none;
 }
+
+.bio,
+.know-how {
+  width: 50%;
+}
+
+.bio-parag {
+  width: 75%;
+}
+
+.w-50-100 {
+  width: 50%;
+}
+
+/*=== Small devices ===*/
+@media screen and (max-width:768px) {
+  section#intro {
+    width: 100%;
+    margin: 60px 0;
+  }
+
+  .social-network-icons {
+    margin: 5px 0;
+  }
+
+  .bio,
+  .know-how {
+    width: 100%;
+  }
+
+  .bio-parag {
+    width: 100%;
+  }
+
+  .w-50-100 {
+    width: 100%;
+  }
+}
