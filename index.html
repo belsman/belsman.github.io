@@ -165,7 +165,6 @@
 						<p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding, or 
 							you simply want to give feedback/suggestion, reach out if you feel I can help.</p>
 						<div class="row">
-							<div id="my-form-status">x</div>
 							<div class="col-8 col-12-small">
 								<form id="my-form" method="POST" action="https://formspree.io/f/mrgrwvje">
 									<div class="row gtr-uniform gtr-50">
@@ -173,10 +172,11 @@
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
+								
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -212,28 +212,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				const form = document.getElementById("my-form");
-				
-				async function handleSubmit(event) {
-				  event.preventDefault();
-				  let status = document.getElementById("my-form-status");
-				  let data = new FormData(event.target);
-				  fetch(event.target.action, {
-					method: form.method,
-					body: data,
-					headers: {
-						'Accept': 'application/json'
-					}
-				  }).then(response => {
-					status.innerHTML = "Thanks for your submission!";
-					form.reset()
-				  }).catch(error => {
-					status.innerHTML = "Oops! There was a problem submitting your form"
-				  });
-				}
-				form.addEventListener("submit", handleSubmit)
-			</script>
-
 	</body>
 </html>
